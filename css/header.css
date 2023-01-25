@@ -9,7 +9,7 @@ li{
 }
 header{
     width: 100%;
-    border:1px solid red;
+    border:0px solid red;
     height: 500px;
 }
 header > .gnb{
