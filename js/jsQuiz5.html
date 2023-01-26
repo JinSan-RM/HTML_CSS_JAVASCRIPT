@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> //1번
+        var nums = [100, 200, 300, 400, 500]
+        nums.splice(3,2)
+        console.log(nums)
+    </script>
+    <script> //2번
+        var arr = [200, 100, 300];
+        arr.splice(2,0,10000);
+        console.log(arr)
+        console.log(typeof(arr)) //object type
+    </script>
+    <script> //9번
+        var year = '2019';
+        var month = '04';
+        var day = '26';
+        var hour = '11';
+        var minute = '34';
+        var second = '27';
+
+        var result = year.concat('-'+month+'-'+day+'-'+hour+'-'+minute+'-'+second)
+        console.log(result)
+    </script>
+    <button onclick="star()">10번</button>
+    <script>
+        function star(){
+            let i = prompt('숫자를 입력해주세요')
+            for(let j = 0;j < i; j++){
+                var star = '*'
+                res = ++star + ++star
+                document.write(res)
+
+            }
+        }
+    </script>
+</body>
+</html>
