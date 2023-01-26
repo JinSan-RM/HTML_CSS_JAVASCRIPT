@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function plus(){
+            // 입력(데이터를 가져옵니다.)
+            // document.getElementById('').value
+            // msg.innerHTML = result
+            n11 = document.getElementById('n1').value
+            n11 = parseInt(n11)
+            n22 = document.getElementById('n2').value
+            n22 = parseInt(n22)
+            result = n11 + n22
+            msg.innerHTML = result
+        }
+        function login(){
+            user1 = document.getElementById('user').value
+            pw1 = document.getElementById('pw').value
+            //처리
+            if(user1 == 'root' && pw1 == '1234'){
+                result = '로그인 성공'
+            }else if(user1 == 'root'){
+                result = '비밀번호를 확인해주세요'
+            }else if(pw1 == '1234'){
+                result = '아이디를 확인해주세요'
+            }else{
+                result = '아이디와 비밀번호를 확인해주세요'
+            }
+            document.getElementById('msg1').innerHTML = result;
+
+                
+        }
+    </script>
+</head>
+<body>
+    숫자1: <input type="text" id="n1"> <br>
+    숫자2: <input type="text" id="n2"> <br>
+    <button onclick="plus()">더하기</button>
+
+    <div id="msg"></div>
+    
+    <hr>
+    아이디: <input type="text" id="user"> <br>
+    비밀번호: <input type="password" id="pw"> <br>
+    <button onclick="login()">로그인 처리</button>
+    <hr>
+    <div id="msg1"></div>
+</body>
+</html>

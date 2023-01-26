@@ -96,6 +96,60 @@
                     break
             }
         }
+        // python for 변수 in 덩어리
+        function forTest(){
+            for (let i = 0; i <10;++i)
+            console.log(i)
+        }
+        //구구단
+        function forTest01(){
+            //for (초기값; 조건식; 증감식) {반복할 명령문}
+            // i++
+            for(let i=1; i<10; i++){
+                console.log(i+'단')
+                for(let j = 1; j<10; j++){
+                    document.write(i+'x'+j +'='+(i*j)+'\n')
+                    console.log(i+'x'+j+'='+(i*j))
+                }
+            } 
+            // i++, ++i 후위연산자, 전위연산자
+        }
+        // 증감 연산자( ++, --)
+        // i -- : 후위연산자 - 연산자를 변수 뒤에 붙여서 값을 먼저 리턴
+        // -- i : 전위연산자 - 연산자를 변수 앞에 붙여서 연산을 먼저,
+        var a = 10
+        var b = 3
+        var result = a++ + --b + b++ + ++a;
+        //           10(11) +2(2) +2(3) + 12(12)
+        function whileTest(){
+            let i = 0
+
+            while(i<10){
+                console.log(i)
+                i++;
+            }
+            let j = 0
+            do{
+                console.log(j)
+            }while(j<10)
+        }
+        function whileTest01(){
+            let i = 2
+            
+            while(i<10){
+                if(i % 2 == 0){
+                    let j = 1;
+                    while(j<10){
+                        var res = i*j;
+                        console.log(i+'x'+j+'='+res)
+                        j++;
+                    
+                    }
+                }
+                i = i + 2;
+            }
+            
+        }
     </script>
 </head>
 <body>
@@ -107,7 +161,9 @@
     <button onclick="switchTest01()" class="btn btn-outline-success">switch01</button>
     <br>
     <button onclick="forTest()" class="btn btn-outline-info">for</button>
+    <button onclick="forTest01()" class="btn btn-outline-info">for(구구단)</button>
     <br>
     <button onclick="whileTest()" class="btn btn-outline-danger">while</button>
+    <button onclick="whileTest01()" class="btn btn-outline-danger">while(구구단)</button>
 </body>
 </html>

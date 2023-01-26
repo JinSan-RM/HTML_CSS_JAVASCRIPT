@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func01(){
+            alert('함수에 이름이 있습니다.')
+        }
+
+        var func02 = function(){ //이름이 없다. 함수가 값으로 쓰였다.
+            //console.log() 로 값도 확인 할 수 있음
+            alert('함수에 이름이 없어요')
+        }
+
+
+        function func03(){
+            (function(){
+                alert('test');
+            })() //(function(){} 값에 ()를 붙여서 함수처럼 사용)
+        }
+
+        function literalprn(literal){
+            literal('함수는 값입니다.')
+        }
+        function func04(){
+            literalprn(function(msg){
+                alert(msg)
+                }
+            )
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>함수의 기능</h1>
+    <h2>함수의 종류</h2>
+
+    <p onclick="func01()">명시적 함수</p>
+    <p onclick="func02()">익명 함수</p>
+    <!-- 함수 타입 변수에 ()붙이면 함수가 실행된다. -->
+    <p onclick="func03()">즉시 실행 함수 : 함수를 ()감싸서 값으로 만들어 사용</p>
+    <p onclick="func04()">ㅇㅇㅇ</p>
+    <p onclick="func05()"></p>
+    <p onclick="func06()"></p>
+
+</body>
+</html>
