@@ -1,107 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0px;
-            
-        }
-        div{
-            border: 1px solid black;
-            margin: 5px;
-        }
-        #header{
-            text-align: center;
-            width: 98%;
-            height: 50px;
-            line-height: 50px;
-            font-weight: bold;
-            font-size: large;
-        }
-        #nav{
-            text-align: center;
-            width: 98%;
-            height: 80px;
-            
-        }
-        #nav >p{
-            font-weight: bold;
-            margin: 10px;
-        }
-        #nav li{
-            list-style-type: none;
-            width: 140px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            float: left;
-            border: 1px solid black;
-            border-left-width: 0px;
-
-        }
-        #wrap{
-            width: 98%;
-            height: 410px;
-            text-align: center;
-            line-height: 400px;
-            font-weight: bold;
-            font-size: large;
-            margin: 5px;
-        }
-        #content{
-            width: 76%;
-            height: 400px;
-            float: left;
-            border:1px solid black;
-            margin:5px;
-
-        }
-        #banner{
-            width: 190px;
-            height: 400px;
-            float: left;
-            border:1px solid black;
-            margin: 5px;
-        }
-        #footer{
-            width: 98%;
-            height:50px;
-            border:1px solid black;
-            text-align: center;
-            line-height: 50px;
-            font-weight: bold;
-            font-size: large;
-        }
-        ul{
-           
-            position: relative;
-            left: 55px;            
-        }
-    </style>
 </head>
-<body>
-    <div id="con">
-        <div id="header">HEADER</div>
-        <div id="nav">
-            <p>NAVIGATION</p>
-                <ul>
-                    <li style="border-left-width: 1px;">menu1</li>
-                    <li>menu2</li>
-                    <li>menu3</li>
-                    <li>menu4</li>
-                    <li>menu5</li>
-                </ul>
-        </div>
-        <div id="wrap">
-            <div id="content">CONTENT</div>
-            <div id="banner">BANNER</div>
+<style>
+    * {
+        margin: 0px;
+    }
 
+    #con {
+        border: 0.5px double black;
+        margin: 10px;
+    }
+
+    #header {
+        border: 1px double black;
+        margin: 2px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #nav {
+        font-size: 0.7em;
+        border: 1px double black;
+        height: 50px;
+        text-align: center;
+        margin: 2px;
+    }
+
+    ul {
+        /* border: 1px double red; */
+        width: 80%;
+        height: 50px;
+        margin-left: 110px;
+
+    }
+
+    li {
+        list-style: none;
+        border: 1px double black;
+        width: 70px;
+        /* height: 5%; */
+        float: left;
+    }
+
+    #content {
+
+        float: left;
+        border: 1px double black;
+        height: 297px;
+        width: 80%;
+        margin: 2px;
+        text-align: center;
+        line-height: 300px;
+        font-size: 13px;
+
+    }
+
+    #banner {
+        float: left;
+        height: 297px;
+        width: 18%;
+        border: 1px double black;
+        margin: 1px;
+        text-align: center;
+        line-height: 300px;
+        font-size: 13px;
+
+    }
+
+    #footer {
+        text-align: center;
+        /* border: 1px dotted red; */
+        margin: 1px;
+        font-size: 0.4em;
+        height: 30px;
+        line-height: 30px;
+
+    }
+
+    #wrap {
+        /* border: 2px blue solid; */
+        height: 303px;
+    }
+
+    p {
+        margin: 5px;
+    }
+</style>
+
+
+<body>
+    <div id='con'>
+        <div id='header'>Header</div>
+        <div id='nav'>
+            <p>NAVIGATION</p>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
         </div>
+
+        <div id='wrap'>
+            <div id='content'>CONTENT</div>
+            <div id='banner'>BANNER</div>
+        </div>
+
         <div id="footer">FOOTER</div>
     </div>
 </body>
+
 </html>

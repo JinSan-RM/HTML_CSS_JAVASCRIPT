@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #site{
-            border:1px black;
+        #site {
+            border: 0px red dotted;
             width: 700px;
-            height: 30px;
+            height: 50px;
         }
-        #site > a{
+
+        #menu {
+            border: 1px red dotted;
+            width: 700px;
+            height: 50px;
+        }
+
+        #site>a {
             text-decoration: none;
             display: block;
-            width:200px;
+            width: 200px;
             height: 30px;
+            line-height: 30px;
+            text-align: center;
             border: 1px solid #123456;
             border-left-width: 0px;
-            text-align: center;
-            line-height: 30px;
 
             float: left;
+
+            /* a(inline) -> block(box) -> 밑으로 -> float:left */
         }
-        a:hover{
+
+        a:hover {
             font-size: 25px;
-            color:red;
+            color: red;
         }
-        #menu{
-            border:1px red dotted;
+
+        #menu div {
+            width: 120px;
+            height: 30px;
+            border: 1px solid #333333;
+            float: left;
+
+            text-align: center;
+            line-height: 30px;
+            border-right-width: 0px;
+        }
+
+        #alphabet {
+            border: 1px red dotted;
             width: 700px;
             height: 50px;
         }
-        #menu div{
+
+        #alphabet>span {
+            display: block;
             width: 120px;
             height: 30px;
-            border:1px solid #333333;
+            border: 1px solid grey;
             float: left;
             text-align: center;
             line-height: 30px;
-            border-left-width: 0px;
+            border-right-width: 0px;
         }
-        #alphabet>span{
+
+        #num>label {
             display: block;
-            width: 150px;
+            width: 120px;
             height: 30px;
-            border: 1px solid black;
-            text-align: center;
-            line-height:30px;
-            float:left;
-            border-left-width: 0px;
-        }
-        #alphabet{
-            border:1px red dotted;
-            width: 700px;
-            height: 50px;
-        }
-        #num label{
-            display: block;
-            border: 1px solid black;
-            width: 150px;
-            height: 99px;
+            border: 1px solid grey;
             float: left;
-            border-left-width:0px ;
             text-align: center;
-            line-height: 33px;
+            line-height: 30px;
+            border-right-width: 0px;
+
         }
     </style>
 </head>
+
 <body>
     <div id="site">
-        <a style="border-left-width: 1px;" href="https://www.naver.com">네이버</a>
-        <a href="https://www.google.com">구글</a>
-        <a href="https://www.youtube.com">유튜브</a>
+        <a style="border-left-width:1px" href="http://www.naver.com">네이버</a>
+        <a href="http://www.google.com">구글</a>
+        <a href="http://www.youtube.com">유튜브</a>
     </div>
-    <br><br>
+
+
     <div id="menu">
-        <div style="border-left-width: 1px;">뉴스</div>
+        <div>뉴스</div>
         <div>카페</div>
-        <div>블로그</div>
+        <div style="border-right-width:1px">블로그</div>
     </div>
 
     <div id="alphabet">
-        <span style="border-left-width:1px;">A</span>
+        <span>A</span>
         <span>B</span>
-        <span>C</span>
+        <span style="border-right-width:1px;">C</span>
     </div>
+
     <div id="num">
-        <label style="border-left-width:1px ;">1</label>
+        <label>1</label>
         <label>2</label>
-        <label>3</label>
+        <label style="border-right-width:1px;">3</label>
     </div>
+
+
+
 </body>
+
 </html>

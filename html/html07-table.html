@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
+        table,
+        th,
+        td {
+            border: 1px solid black;
         }
-        table{
-            width:100%;
-        }
-        .th-1{
-            width:100px;
-        }
-        .th-2{
-            width:200px;
-        }
-        </style>
-        
+    </style>
 </head>
+
 <body>
     <h1>표</h1>
     <h2>기본테이블</h2>
-    
-    <table border="1">
-        <!-- table row -->
+
+    <table>
+        <!-- table raw -->
         <tr>
-            <th class="th-1">헤더1</th>
-            <th class="th-2">헤더2</th>
+            <th>헤더1</th>
+            <th>헤더2</th>
             <th>헤더3</th>
         </tr>
+
         <tr>
             <td>데이터1</td>
             <td>데이터2</td>
             <td>데이터3</td>
         </tr>
-        
+
         <tr>
+            <td>데이터3</td>
             <td>데이터4</td>
             <td>데이터5</td>
-            <td>데이터6</td>
         </tr>
+
         <tr>
+            <td>데이터6</td>
             <td>데이터7</td>
             <td>데이터8</td>
-            <td>데이터9</td>
         </tr>
+
     </table>
 
-    <h2>추가태그</h2>
+    <h2>추가테그</h2>
 
     <table>
-        <caption>테이블 제목</caption>
+        <caption>데이블제목</caption>
         <colgroup>
             <col width="20%">
             <col width="30%">
@@ -67,167 +63,59 @@
                 <th>컬럼3</th>
             </tr>
         </thead>
-        
+
         <tbody>
             <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                <td rowspan="2" style="background-color:pink">1</td>
+                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
-                <td>4</td>
                 <td>5</td>
                 <td>6</td>
-        </tr>
+            </tr>
         </tbody>
 
         <tfoot>
             <tr>
-                <td>footer1</td>
-                <td>footer2</td>
-                <td>footer3</td>
+                <td colspan="3">footer1</td>
+                <!-- <td>footer2</td>
+                <td>footer3</td> -->
             </tr>
         </tfoot>
+
     </table>
-<br><br><br>
+    <br>
     <table>
-        <colgroup>
-            <col width="50px" >
-            <col width="50px" >
-            <col width="50px" >
-            <col width="50px" >
-            <col width="50px" >
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
 
-        </colgroup>
-        <tbody>
-            <tr>
-                <td rowspan="2" style="background-color: chocolate;">1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="background-color: lawngreen;">7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td colspan="3" style="background-color: blue;">13</td>
-            </tr>
-            <tr>
-                <td colspan="5" style="background-color: blanchedalmond;">16</td>
-            </tr>
-        </tbody>
+            <td rowspan="2">7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <!-- <td>12</td> -->
+            <td colspan="3" style="background-color: blue">13</td>
+            <!-- <td>14</td>
+            <td>15</td> -->
+        </tr>
+        <tr>
+            <td colspan="5">16</td>
+            <!-- <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td> -->
+        </tr>
     </table>
-<br><br><br>
-    <table>
-        <thead>
-            <th>용도</th>
-            <th>중량</th>
-            <th>개수</th>
-            <th>가격</th>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>선물용</td>
-                <td>3Kg</td>
-                <td>11~16과</td>
-                <td>35,000</td>
-            </tr>
-            <tr>
-                <td>선물용</td>
-                <td>5Kg</td>
-                <td>18~26과</td>
-                <td>52,000</td>
-            </tr>
-            <tr>
-                <td>가정용</td>
-                <td>3Kg</td>
-                <td>11~16과</td>
-                <td>30,000</td>
-            </tr>
-            <tr>
-                <td>가정용</td>
-                <td>5Kg</td>
-                <td>18~26과</td>
-                <td>47,000</td>
-            </tr>
-        </tbody>
-    </table>
-<br><br><br>
-    <table>
-        <thead>
-            <th>용도</th>
-            <th>중량</th>
-            <th>개수</th>
-            <th>가격</th>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td rowspan="2">선물용</td>
-                <td>3Kg</td>
-                <td>11~16과</td>
-                <td>35,000</td>
-            </tr>
-            <tr>
-                <td>5Kg</td>
-                <td>18~26과</td>
-                <td>52,000</td>
-            </tr>
-            <tr>
-                <td rowspan="2">가정용</td>
-                <td>3Kg</td>
-                <td>11~16과</td>
-                <td>30,000</td>
-            </tr>
-            <tr>
-                <td>5Kg</td>
-                <td>18~26과</td>
-                <td>47,000</td>
-            </tr>
-        </tbody>
-    </table>
-<br><br><br>
-    <table>
-        <thead style="background-color: darkgrey;">
-            <th>방이름</th>
-            <th>대상</th>
-            <th>크기</th>
-            <th>가격</th>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>유채방</td>
-                <td>여성도미토리</td>
-                <td rowspan="3">4인실</td>
-                <td rowspan="4">1인 20,000</td>
-            </tr>
-            <tr>
-                <td rowspan="2">동백방</td>
-                <td>동성도미토리</td>
-            </tr>
-            <tr>
-                <td>가족1팀</td>
-            </tr>
-            <tr>
-                <td>천혜향방</td>
-                <td>-</td>
-                <td>2인실</td>
-            </tr>
-        </tbody>
-
-        <tfoot style="background-color: darkgrey;">
-            <tr>
-                <td colspan="4">바깥채 전체를 렌트합니다</td>
-            </tr>
-        </tfoot>
-    </table>
-
 </body>
+
 </html>
