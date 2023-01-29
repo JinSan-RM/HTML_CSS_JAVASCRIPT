@@ -44,3 +44,7 @@ CSS
 선택자, 박스 => Layout,
 
 칼라질라
+
+## Javascript
+
+1. 기본문법
