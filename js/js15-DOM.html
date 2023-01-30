@@ -26,8 +26,26 @@
         }
     </style>
     <script>
+        var num = 1
         function prevImg() {
             //document.getElementById('gallery').scr =
+            num --  // num = num - 1
+            if ( num < 1 ){
+                num = 6 // 5장일 경우 숫자를 5개로 변경
+            }
+        
+            document.getElementById('gallery').scr = '../image/00' + num + '.jpg'
+            return false
+        }
+        function nextImg() {
+            //document.getElementById('gallery').scr =
+            num ++  // num = num - 1
+            if ( num > 6 ){
+                num = 1 // 5장일 경우 숫자를 5개로 변경
+            }
+            document.getElementById('gallery').scr = '../image/00' + num + '.jpg'
+            return false //이벤트 전파를 막는 것
+
         }
     </script>
 </head>
@@ -35,7 +53,10 @@
 <body>
     <div id="wrap">
         <p>
-            <img src="../image/left.png" onclick='prevImg()' alt="이전그림">
+            <a href="http://www.naver.com" onclick='return prevImg()'>
+                <img src="../image/left.png" alt="이전그림">
+            </a>
+            
             <img src="../image/001.jpg" alt="gallery" id="gallery">
             <img src="../image/right.png" onclick='nextImg()' alt="다음그림">
 

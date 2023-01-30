@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function tableVal(){
+            let id = document.getElementsByName('id')[0].value
+            let pw = document.getElementsByName('pw')[0].value;
+            let addr = document.getElementsByName('addr')[0].value;
+            let phone = document.getElementsByName('phone')[0].value;
+            //console.log(id,pw,addr,phone);
+            arr = [id, pw, addr, phone]
+            // 배열에 정보들 넣어서 입력
+            theads = document.querySelectorAll('thead th')
+            //thead의 th 갯수를 입력 5개
+            //console.log(theads)
+            tr = document.createElement('tr');
+            //console.log(tr) 각각이 td로 들어가는 것을 확인.
+            tbody = document.getElementById('addtr');
+            //console.log(tbody) <tbody><tr><td></td></tr></tbody>순으로 넣음
+
+            for(let i = 0; i <theads.length-1;i++){
+                th = document.createElement('th')
+                th.innerHTML = arr[i]
+                tr.appendChild(th) //th에 각각 정보들 넣을걸 tr에 append
+                //console.log(tr)
+            }
+            
+
+            //console.log(tbody)
+            th = document.createElement('th')
+            th.innerHTML = '삭제'
+
+            th.addEventListener('click', function () {
+                this.parentElement.remove()
+
+            })
+
+            tr.appendChild(th)
+            tbody.appendChild(tr)
+
+        }
+        function deleteAllRow(){
+            tbody = document.getElementById('addtr');
+            // tbody.removeChild(tr)
+            // while(tbody.hasChildNodes()){
+            //     tbody.removeChild(tbody.lastChild)
+            // }
+            tbodychild = tbody.hasChildNodes()
+            len = tbodychild.length-1
+            for(i = 0; i <len; i++){
+                tbody.removeChild(tbody.lastChild)
+            };
+
+        }
+    </script>
+</head>
+
+<body>
+    <table id="intable">
+        <tr>
+            <td>아이디:</td>
+            <td><input type="text" name="id" value=""></td>
+        </tr>
+        <tr>
+            <td>비밀번호:</td>
+            <td><input type="text" name="pw"></td>
+        </tr>
+        <tr>
+            <td>주소:</td>
+            <td><input type="text" name="addr"></td>
+        </tr>
+        <tr>
+            <td>전화번호:</td>
+            <td><input type="text" name="phone"></td>
+        </tr>
+    </table>
+    <input type="button" value="추가" onclick="tableVal(); return false;">
+    <input type="button" value="전체삭제" onclick="deleteAllRow()">
+
+    <div id="addtable">
+        <table id="ctb">
+            <colgroup>
+                <col width="230px">
+                <col width="230px">
+                <col width="230px">
+                <col width="230px">
+                <col width="230px">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>아이디</th>
+                    <th>비번</th>
+                    <th>주소</th>
+                    <th>전화번호</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody id="addtr">
+
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
